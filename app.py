@@ -103,7 +103,9 @@ if form_data["submitted"]:
 
     """, (
 
-        pd.Timestamp.now(),
+        pd.Timestamp.now().strftime(
+            "%Y-%m-%d %H:%M:%S"
+        ),
 
         form_data["name"],
         form_data["plant"],
