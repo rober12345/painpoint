@@ -134,3 +134,19 @@ def show_dashboard(df):
         df,
         use_container_width=True
     )
+
+    # =====================================================
+    # PHOTOS
+    # =====================================================
+
+    st.subheader("Photos")
+
+    for _, row in df.iterrows():
+
+        if row["photo_path"]:
+
+            st.image(
+                row["photo_path"],
+                caption=f"Submission ID {row['id']}",
+                width=600
+            )
